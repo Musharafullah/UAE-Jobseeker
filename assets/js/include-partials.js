@@ -30,7 +30,7 @@ async function loadFloatingActions() {
   }
 }
 
-// Share tab sirf un pages par aata hai jinke <body> mein "data-share" likha ho
+
 async function loadShareTab() {
   if (!document.body.hasAttribute("data-share")) return;
   try {
