@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Job-Fit Analyzer - UAE Job Seekers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="../../assets/css/variables.css" rel="stylesheet">
+  <link href="../../assets/css/main.css" rel="stylesheet">
+  <link href="../../assets/css/components.css" rel="stylesheet">
+</head>
+<body data-base="../../">
+
+  <div id="navbar"></div>
+
+  <main class="section-padding">
+    <div class="container">
+
+      <!-- START: Top line -->
+      <div class="content-bar"></div>
+      <!-- END: Top line -->
+
+      <!-- START: Header & Intro -->
+      <div class="analyzer-header mb-4">
+        <h1 class="analyzer-main-title mb-3">JOB-FIT ANALYZER</h1>
+        <p class="analyzer-intro">
+          Are you tired of spending hours tailoring your resume to each job you apply for? Don't you worry now because with this FREE compatibility tool, you can easily analyze your CV and job description to get a decent percentage match score instantly.
+        </p>
+        <p class="analyzer-intro mb-0">
+          It's as simple as pasting your CV and job description both into this tool and clicking 'ANALYZE.' The tool will provide you with a snapshot of how well your CV aligns with the job yo are eyeing.
+        </p>
+      </div>
+      <!-- END: Header & Intro -->
+
+      <!-- START: Two Column Textareas -->
+      <div class="row g-4 mt-2">
+        <!-- Left Box: Your CV -->
+        <div class="col-md-6">
+          <label for="cvInput" class="analyzer-label">Your CV</label>
+          <textarea id="cvInput" class="form-control analyzer-textarea" rows="12" placeholder=""></textarea>
+          <div class="mt-2 text-start">
+            <button type="button" id="clearCvBtn" class="analyzer-clear-link">Clear</button>
+          </div>
+        </div>
+
+        <!-- Right Box: Paste job description here -->
+        <div class="col-md-6">
+          <label for="jdInput" class="analyzer-label">Paste job description here</label>
+          <textarea id="jdInput" class="form-control analyzer-textarea" rows="12" placeholder=""></textarea>
+          <div class="mt-2 text-end">
+            <button type="button" id="clearJdBtn" class="analyzer-clear-link">Clear</button>
+          </div>
+        </div>
+      </div>
+      <!-- END: Two Column Textareas -->
+
+      <!-- START: Analyze Button -->
+      <div class="text-center mt-4 mb-4">
+        <button type="button" id="analyzeBtn" class="btn btn-olive px-4 py-2 fw-semibold">
+          Analyze
+        </button>
+      </div>
+      <!-- END: Analyze Button -->
+
+      <!-- START: Analysis Result Snapshot (Hidden until Analyze is clicked) -->
+      <div id="analyzerAlert" class="alert alert-warning d-none text-center mx-auto" style="max-width: 600px;" role="alert">
+        Please paste both your CV and the job description before clicking Analyze.
+      </div>
+
+      <div id="analyzerResult" class="analyzer-result-card d-none mt-4">
+        <div class="row align-items-center g-4">
+          <div class="col-md-4 text-center border-end-md">
+            <span class="text-muted-uaejs small fw-semibold text-uppercase">Compatibility Score</span>
+            <div class="analyzer-score my-1" id="matchScore">0%</div>
+            <span class="badge badge-mustard" id="matchLabel">Match Snapshot</span>
+          </div>
+          <div class="col-md-8">
+            <h3 class="h6 fw-bold text-uppercase mb-2" style="color: var(--uaejs-olive-dark);">Matched Keywords</h3>
+            <div id="matchedTags" class="d-flex flex-wrap gap-2 mb-3"></div>
+
+            <h3 class="h6 fw-bold text-uppercase mb-2" style="color: var(--uaejs-muted);">Missing Keywords to Consider</h3>
+            <div id="missingTags" class="d-flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+      </div>
+      <!-- END: Analysis Result Snapshot -->
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/include-partials.js"></script>
+  <script>
+    (function () {
+      const cvInput = document.getElementById("cvInput");
+      const jdInput = document.getElementById("jdInput");
+      const clearCvBtn = document.getElementById("clearCvBtn");
+      const clearJdBtn = document.getElementById("clearJdBtn");
+      const analyzeBtn = document.getElementById("analyzeBtn");
+      const alertBox = document.getElementById("analyzerAlert");
+      const resultCard = document.getElementById("analyzerResult");
+      const scoreEl = document.getElementById("matchScore");
+      const labelEl = document.getElementById("matchLabel");
+      const matchedEl = document.getElementById("matchedTags");
+      const missingEl = document.getElementById("missingTags");
+
+      const STOP_WORDS = new Set([
+        "the","and","for","with","that","this","from","have","will","your","you","are","not","but","all",
+        "can","our","their","has","had","more","also","into","than","other","such","only","its","over",
+        "work","working","job","role","experience","years","year","skills","skill","team","ability",
+        "strong","good","using","used","new","well","within","across","including","required","preferred"
+      ]);
+
+      function extractKeywords(text) {
+        const words = text.toLowerCase().match(/[a-z][a-z0-9+#.-]{2,}/g) || [];
+        return [...new Set(words.filter((w) => !STOP_WORDS.has(w)))];
+      }
+
+      clearCvBtn.addEventListener("click", () => {
+        cvInput.value = "";
+        resultCard.classList.add("d-none");
+        alertBox.classList.add("d-none");
+      });
+
+      clearJdBtn.addEventListener("click", () => {
+        jdInput.value = "";
+        resultCard.classList.add("d-none");
+        alertBox.classList.add("d-none");
+      });
+
+      analyzeBtn.addEventListener("click", () => {
+        const cvText = cvInput.value.trim();
+        const jdText = jdInput.value.trim();
+
+        if (!cvText || !jdText) {
+          alertBox.classList.remove("d-none");
+          resultCard.classList.add("d-none");
+          return;
+        }
+
+        alertBox.classList.add("d-none");
+
+        const cvWords = new Set(extractKeywords(cvText));
+        const jdKeywords = extractKeywords(jdText);
+
+        const matched = jdKeywords.filter((k) => cvWords.has(k));
+        const missing = jdKeywords.filter((k) => !cvWords.has(k));
+
+        const pct = jdKeywords.length ? Math.round((matched.length / jdKeywords.length) * 100) : 0;
+
+        scoreEl.textContent = `${pct}%`;
+        labelEl.textContent = pct >= 70 ? "Strong Fit" : pct >= 45 ? "Moderate Fit" : "Needs Tailoring";
+
+        matchedEl.innerHTML = matched.length
+          ? matched.slice(0, 18).map((w) => `<span class="badge badge-olive px-2 py-1">${w}</span>`).join("")
+          : `<span class="text-muted-uaejs small">No direct keyword matches found.</span>`;
+
+        missingEl.innerHTML = missing.length
+          ? missing.slice(0, 18).map((w) => `<span class="badge bg-light text-dark border px-2 py-1">${w}</span>`).join("")
+          : `<span class="text-muted-uaejs small">Great! All major keywords covered.</span>`;
+
+        resultCard.classList.remove("d-none");
+        resultCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    })();
+  </script>
+</body>
+</html>

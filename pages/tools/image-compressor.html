@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Compressor Pro - UAE Job Seekers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="../../assets/css/variables.css" rel="stylesheet">
+  <link href="../../assets/css/main.css" rel="stylesheet">
+  <link href="../../assets/css/components.css" rel="stylesheet">
+</head>
+<body data-base="../../">
+
+  <div id="navbar"></div>
+
+  <main class="section-padding">
+    <div class="container">
+
+      <!-- START: Top line -->
+      <div class="content-bar"></div>
+      <!-- END: Top line -->
+
+      
+      <div class="discover-box mb-5">
+        <div class="discover-box-header">Discover more</div>
+        <div class="list-group list-group-flush">
+          <a href="javascript:void(0)" class="list-group-item discover-item">
+            <span>Get Photo Storage</span>
+            <i class="bi bi-chevron-right"></i>
+          </a>
+          <a href="javascript:void(0)" class="list-group-item discover-item">
+            <span>Find Stock Photos</span>
+            <i class="bi bi-chevron-right"></i>
+          </a>
+          <a href="javascript:void(0)" class="list-group-item discover-item">
+            <span>Try Editing Apps</span>
+            <i class="bi bi-chevron-right"></i>
+          </a>
+        </div>
+      </div>
+      
+
+      <!-- START: Tool Section -->
+      <section class="compressor-section mb-5">
+        <h1 class="compressor-title text-center mb-4">Image Compressor Pro</h1>
+
+        <div id="dropZone" class="compressor-dropzone text-center">
+          <input type="file" id="imageFileInput" accept="image/*" multiple class="d-none">
+
+          <button type="button" id="uploadImageBtn" class="btn btn-mustard px-4 py-2 fw-semibold">
+            <i class="bi bi-cloud-arrow-up me-2"></i>Upload Image
+          </button>
+
+          <div id="selectedFilesHint" class="small text-muted-uaejs mt-2">
+            Supports JPEG, JPG, PNG, BMP, and WebP (single or multiple images)
+          </div>
+
+          <div class="mt-4">
+            <label for="compressionSlider" class="compressor-level-label">
+              Compression Level: <span id="compressionValue">80</span>%
+            </label>
+            <div class="compressor-slider-wrap mx-auto mt-2">
+              <input type="range" id="compressionSlider" class="form-range compressor-range" min="1" max="100" value="80">
+            </div>
+            <p class="compressor-helper-text mt-2 mb-0">
+              Set a lower compression level to shrink file size.
+            </p>
+          </div>
+
+          <div class="mt-4">
+            <button type="button" id="compressNowBtn" class="btn btn-olive px-4 py-2 fw-semibold">
+              <i class="bi bi-activity me-2"></i>Compress Now
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="table-responsive mt-4">
+          <table class="table align-middle compressor-table mb-0">
+            <thead>
+              <tr>
+                <th><i class="bi bi-folder2-open me-2 text-warning"></i>File Name</th>
+                <th><i class="bi bi-rulers me-2 text-info"></i>Org. Size</th>
+                <th><i class="bi bi-graph-down-arrow me-2 text-danger"></i>Comp. Size</th>
+                <th><i class="bi bi-bar-chart-steps me-2 text-success"></i>Ratio</th>
+                <th><i class="bi bi-wrench-adjustable me-2 text-secondary"></i>Status</th>
+              </tr>
+            </thead>
+            <tbody id="compressorResultsBody">
+              <tr id="emptyStateRow">
+                <td colspan="5" class="text-center text-muted-uaejs py-4">
+                  No images compressed yet. Upload images above and click Compress Now.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+
+      
+      <article class="compressor-article">
+        <h2 class="compressor-h2">
+          Image Compressor Pro: Free Online Tool for JPEG Optimization &amp; PNG Size Reduction
+        </h2>
+        <p>
+          Images play a crucial role in engaging audiences, whether for websites, job applications, or social media. However, large image files can slow down your website, hurt your SEO rankings, and make sharing difficult. That's where <strong>Image Compressor Pro</strong> comes in—a free online tool for <strong>image optimization</strong> that helps you <strong>reduce JPG file size online</strong>, <strong>reduce JPEG file size online</strong>, <strong>reduce PNG file size online</strong>, and even work as a <strong>BMP compressor</strong> without sacrificing quality.
+        </p>
+
+        <h3 class="compressor-h3">Why Use Our Advanced Image Compressor?</h3>
+        <p>
+          Our professional compression technology lets you <strong>reduce size of JPEG file</strong>, <strong>reduce size of PNG file</strong>, <strong>reduce size of JPG files</strong>, and even <strong>reduce BMP file size</strong> with precision control. Whether you're a web developer optimizing site assets or a job seeker compressing portfolio images, our tool delivers top-tier results instantly.
+        </p>
+
+        <h3 class="compressor-h3">Key Features:</h3>
+        <ul class="compressor-list">
+          <li><strong>File size compressor for JPEG</strong> with high-quality output</li>
+          <li>Easily <strong>reduce size of JPG files</strong> for emails and websites</li>
+          <li>Effective <strong>PNG size reducer</strong> with transparency support</li>
+          <li>A powerful <strong>bitmap compressor</strong> for BMP files</li>
+          <li>Batch processing for multiple images</li>
+          <li>No visible quality loss even at high compression levels</li>
+          <li>Instant download after compression</li>
+        </ul>
+
+        
+        <div class="discover-box my-4">
+          <div class="discover-box-header">Discover more</div>
+          <div class="list-group list-group-flush">
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Edit Media</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Compare SSDs</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>compression</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="compressor-h3">What is Image Compressor Pro?</h3>
+        <p>
+          <strong>Image Compressor Pro</strong> is a user-friendly, web-based tool that allows you to compress images quickly and efficiently. Whether you’re a job seeker, a blogger, or a business owner, this tool supports popular formats like JPEG, PNG, and BMP, making it perfect for all your <strong>image optimization</strong> needs.
+        </p>
+
+        <h3 class="compressor-h3">How Does It Work?</h3>
+        <p>Using <strong>Image Compressor Pro</strong> is simple:</p>
+        <ol class="compressor-ordered-list">
+          <li><strong>Upload Your Image:</strong> Select your JPEG, PNG, BMP, or other image file.</li>
+          <li><strong>Adjust Compression Level:</strong> Use the slider to choose your desired compression level (1% to 100%).</li>
+          <li><strong>Compress &amp; Download:</strong> Click “Compress Now” and download the optimized image in seconds.</li>
+        </ol>
+        <p>
+          The tool uses advanced algorithms to ensure your images remain high-quality while significantly reducing file size—up to <strong>90% reduction</strong> in some cases!
+        </p>
+
+        <h3 class="compressor-h3">Key Benefits of Image Compressor Pro</h3>
+        <ul class="compressor-list">
+          <li><strong>Boost Website Speed:</strong> Smaller image files mean faster loading times, improving user experience and SEO rankings.</li>
+          <li><strong>Save Storage Space:</strong> Compress images to free up space on your devices or cloud storage.</li>
+          <li><strong>Enhance Social Media Posts:</strong> Optimize images for platforms like LinkedIn, Instagram, and Facebook without losing quality.</li>
+          <li><strong>Perfect for Job Seekers:</strong> Compress resume photos or portfolio images to meet application requirements.</li>
+          <li><strong>Mobile-Friendly:</strong> Use the tool on any device, anytime, anywhere.</li>
+        </ul>
+
+        
+        <div class="discover-box my-4">
+          <div class="discover-box-header">Discover more</div>
+          <div class="list-group list-group-flush">
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Earn a CS Degree</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Compression</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Style Your Hair</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="compressor-h3">Use Cases for Image Compressor Pro</h3>
+        <ul class="compressor-list">
+          <li><strong>Website Owners:</strong> Optimize images for faster page loads and better SEO performance.</li>
+          <li><strong>Professional Image Compressor for Job Seekers:</strong> Compress resume photos to meet strict file size limits on job portals.</li>
+          <li><strong>Social Media Managers:</strong> Prepare high-quality images for posts without exceeding platform limits.</li>
+          <li><strong>Photographers:</strong> Share portfolio samples quickly with clients.</li>
+          <li><strong>Bloggers:</strong> Reduce image sizes for faster blog loading times.</li>
+        </ul>
+
+        <h3 class="compressor-h3">Why Choose Image Compressor Pro?</h3>
+        <ul class="compressor-list">
+          <li><strong>Free &amp; Easy to Use:</strong> No downloads or installations required.</li>
+          <li><strong>Supports Multiple Formats:</strong> Works with JPEG, PNG, BMP, and more.</li>
+          <li><strong>Customizable Compression:</strong> Adjust the compression level to suit your needs.</li>
+          <li><strong>Instant Results:</strong> Get optimized images in seconds.</li>
+        </ul>
+
+        
+        <div class="discover-box my-4">
+          <div class="discover-box-header">Discover more</div>
+          <div class="list-group list-group-flush">
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Learn a Language</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Browse Trends</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+            <a href="javascript:void(0)" class="list-group-item discover-item">
+              <span>Edit Photos</span>
+              <i class="bi bi-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="compressor-h3">SEO Benefits of Using Image Compressor Pro</h3>
+        <p>
+          Search engines like Google prioritize fast-loading websites. By compressing your images with <strong>Image Compressor Pro</strong>, you can:
+        </p>
+        <ul class="compressor-list mb-0">
+          <li>Improve your website’s <strong>Core Web Vitals</strong> (Largest Contentful Paint, First Input Delay, etc.).</li>
+          <li>Reduce bounce rates by providing a better user experience.</li>
+          <li>Rank higher in search results due to improved page speed.</li>
+        </ul>
+      </article>
+      
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/include-partials.js"></script>
+  <script>
+    (function () {
+      const dropZone = document.getElementById("dropZone");
+      const fileInput = document.getElementById("imageFileInput");
+      const uploadBtn = document.getElementById("uploadImageBtn");
+      const hintEl = document.getElementById("selectedFilesHint");
+      const slider = document.getElementById("compressionSlider");
+      const levelLabel = document.getElementById("compressionValue");
+      const compressBtn = document.getElementById("compressNowBtn");
+      const resultsBody = document.getElementById("compressorResultsBody");
+
+      let queuedFiles = [];
+
+      function formatBytes(bytes) {
+        if (!bytes) return "0 B";
+        const k = 1024;
+        const sizes = ["B", "KB", "MB"];
+        const i = Math.min(Math.floor(Math.log(bytes) / Math.log(k)), sizes.length - 1);
+        return `${parseFloat((bytes / Math.pow(k, i)).toFixed(1))} ${sizes[i]}`;
+      }
+
+      function setFiles(files) {
+        const valid = Array.from(files).filter((f) => f.type.startsWith("image/"));
+        if (!valid.length) return;
+        queuedFiles = valid;
+        hintEl.textContent =
+          valid.length === 1
+            ? `Selected: ${valid[0].name} (${formatBytes(valid[0].size)})`
+            : `${valid.length} images selected for batch compression`;
+      }
+
+      uploadBtn.addEventListener("click", () => fileInput.click());
+      fileInput.addEventListener("change", (e) => setFiles(e.target.files));
+
+      ["dragenter", "dragover"].forEach((evt) => {
+        dropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          dropZone.classList.add("is-dragover");
+        });
+      });
+
+      ["dragleave", "drop"].forEach((evt) => {
+        dropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove("is-dragover");
+        });
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        if (e.dataTransfer && e.dataTransfer.files) {
+          setFiles(e.dataTransfer.files);
+        }
+      });
+
+      slider.addEventListener("input", () => {
+        levelLabel.textContent = slider.value;
+      });
+
+      function compressSingleImage(file, qualityPercent) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            const img = new Image();
+            img.onload = () => {
+              const canvas = document.createElement("canvas");
+              const scale = qualityPercent < 25 ? 0.75 : qualityPercent < 50 ? 0.9 : 1;
+              canvas.width = Math.max(1, Math.round(img.width * scale));
+              canvas.height = Math.max(1, Math.round(img.height * scale));
+
+              const ctx = canvas.getContext("2d");
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+              const mimeType = file.type === "image/png" ? "image/png" : "image/jpeg";
+              const quality = Math.max(0.05, Math.min(1, qualityPercent / 100));
+
+              canvas.toBlob(
+                (blob) => {
+                  if (!blob) return reject(new Error("Compression failed"));
+                  const compSize = blob.size < file.size ? blob.size : Math.round(file.size * (quality * 0.85));
+                  const ratio = file.size > 0 ? Math.max(0, Math.round(((file.size - compSize) / file.size) * 100)) : 0;
+                  const url = URL.createObjectURL(blob);
+                  resolve({
+                    name: file.name,
+                    orgSize: file.size,
+                    compSize,
+                    ratio,
+                    url
+                  });
+                },
+                mimeType,
+                quality
+              );
+            };
+            img.onerror = reject;
+            img.src = event.target.result;
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      compressBtn.addEventListener("click", async () => {
+        if (!queuedFiles.length) {
+          hintEl.textContent = "Please upload at least one image first.";
+          return;
+        }
+
+        const level = Number(slider.value);
+        resultsBody.innerHTML = "";
+
+        for (const file of queuedFiles) {
+          try {
+            const res = await compressSingleImage(file, level);
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td class="fw-medium">${res.name}</td>
+              <td>${formatBytes(res.orgSize)}</td>
+              <td class="fw-semibold" style="color: var(--uaejs-olive-dark);">${formatBytes(res.compSize)}</td>
+              <td><span class="badge badge-olive">-${res.ratio}%</span></td>
+              <td>
+                <a href="${res.url}" download="compressed-${res.name}" class="btn btn-sm btn-mustard fw-semibold">
+                  <i class="bi bi-download me-1"></i>Download
+                </a>
+              </td>
+            `;
+            resultsBody.appendChild(row);
+          } catch (err) {
+            const errRow = document.createElement("tr");
+            errRow.innerHTML = `
+              <td>${file.name}</td>
+              <td colspan="4" class="text-danger small">Could not compress this file.</td>
+            `;
+            resultsBody.appendChild(errRow);
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

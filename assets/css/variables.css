@@ -1,0 +1,34 @@
+:root {
+  --uaejs-olive: #5f6f2e;
+  --uaejs-olive-dark: #4a5823;
+  --uaejs-olive-deep: #3a4520;
+  --uaejs-olive-light: #e9edd8;
+  --uaejs-cream: #f7f3e8;
+  --uaejs-charcoal: #2b2d2a;
+  --uaejs-mustard: #e0a82e;
+  --uaejs-mustard-dark: #c98f14;
+
+  --uaejs-white: #ffffff;
+  --uaejs-muted: #6b6e66;
+  --uaejs-border: #e3ddcb;
+
+  --uaejs-font-heading: "Poppins", sans-serif;
+  --uaejs-font-body: "Inter", sans-serif;
+
+  --uaejs-radius: 12px;
+  --uaejs-radius-sm: 8px;
+  --uaejs-shadow: 0 4px 16px rgba(43, 45, 42, 0.08);
+  --uaejs-shadow-hover: 0 8px 24px rgba(43, 45, 42, 0.14);
+
+  --bs-primary: var(--uaejs-olive);
+  --bs-primary-rgb: 95, 111, 46;
+  --bs-body-bg: var(--uaejs-cream);
+  --bs-body-color: var(--uaejs-charcoal);
+  --bs-body-font-family: var(--uaejs-font-body);
+  --bs-link-color: var(--uaejs-olive);
+  --bs-link-color-rgb: 95, 111, 46;
+  --bs-link-hover-color: var(--uaejs-olive-dark);
+  --bs-link-hover-color-rgb: 74, 88, 35;
+  --bs-border-color: var(--uaejs-border);
+  --bs-border-radius: var(--uaejs-radius-sm);
+}

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Resizer (JPG, PNG, JPEG &amp; BMP) - UAE Job Seekers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="../../assets/css/variables.css" rel="stylesheet">
+  <link href="../../assets/css/main.css" rel="stylesheet">
+  <link href="../../assets/css/components.css" rel="stylesheet">
+</head>
+<body data-base="../../">
+
+  <div id="navbar"></div>
+
+  <main class="section-padding">
+    <div class="container">
+
+      
+      <div class="content-bar"></div>
+      
+      
+      <section class="compressor-section mb-5">
+        <div class="d-flex flex-wrap align-items-baseline gap-2 mb-4">
+          <h1 class="compressor-title mb-0">Image Resizer</h1>
+          <span class="resizer-sub-format">(JPG, PNG, JPEG &amp; BMP)</span>
+        </div>
+
+        <div id="resizerDropZone" class="compressor-dropzone text-center">
+          <div class="resizer-file-bar mx-auto">
+            <input type="file" id="resizerFileInput" accept="image/*,.bmp" class="d-none">
+            <button type="button" id="resizerChooseBtn" class="resizer-choose-btn">Choose file</button>
+            <span id="resizerFileName" class="resizer-file-text">No file chosen</span>
+          </div>
+
+          <div id="resizerControls" class="row g-3 justify-content-center mt-4 text-start d-none" style="max-width: 720px; margin-inline: auto;">
+            <div class="col-6 col-sm-3">
+              <label for="resizerWidth" class="form-label small fw-semibold mb-1">Width (px)</label>
+              <input type="number" id="resizerWidth" class="form-control" min="1" max="8000">
+            </div>
+            <div class="col-6 col-sm-3">
+              <label for="resizerHeight" class="form-label small fw-semibold mb-1">Height (px)</label>
+              <input type="number" id="resizerHeight" class="form-control" min="1" max="8000">
+            </div>
+            <div class="col-6 col-sm-3">
+              <label for="resizerRatio" class="form-label small fw-semibold mb-1">Aspect Ratio</label>
+              <select id="resizerRatio" class="form-select">
+                <option value="freeform" selected>Freeform</option>
+                <option value="1:1">1:1 (Square)</option>
+                <option value="16:9">16:9 (Widescreen)</option>
+                <option value="9:16">9:16 (Story)</option>
+              </select>
+            </div>
+            <div class="col-6 col-sm-3">
+              <label for="resizerFormat" class="form-label small fw-semibold mb-1">Format</label>
+              <select id="resizerFormat" class="form-select">
+                <option value="image/jpeg" data-ext="jpg" selected>JPG</option>
+                <option value="image/png" data-ext="png">PNG</option>
+                <option value="image/bmp" data-ext="bmp">BMP</option>
+                <option value="image/jpeg" data-ext="jpeg">JPEG</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <button type="button" id="resizeImageBtn" class="btn btn-olive px-4 py-2 fw-semibold">
+              Resize Image
+            </button>
+          </div>
+
+          <div id="resizerHint" class="small text-muted-uaejs mt-2"></div>
+        </div>
+
+        <!-- Resized Output Preview -->
+        <div id="resizerOutputBox" class="mt-4 p-4 bg-white border rounded-3 shadow-sm d-none">
+          <div class="row align-items-center g-4">
+            <div class="col-md-5 text-center">
+              <img id="resizerPreviewImg" src="" alt="Resized preview" class="img-fluid rounded border" style="max-height: 220px;">
+            </div>
+            <div class="col-md-7">
+              <h2 class="h5 fw-bold mb-2" style="color: var(--uaejs-olive-dark);">Resized Image Ready</h2>
+              <p class="small text-muted-uaejs mb-3" id="resizerMetaText"></p>
+              <a id="resizerDownloadLink" href="#" download="resized-image.jpg" class="btn btn-mustard px-4 py-2 fw-semibold">
+                <i class="bi bi-download me-2"></i>Download Image
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: Tool Section -->
+
+     
+      <article class="compressor-article">
+        <h2 class="compressor-h2">
+          Image Resizer Pro: Free Online Tool for Perfect Dimensions &amp; Aspect Ratios
+        </h2>
+        <p>
+          In today's visual-first digital landscape, proper image sizing is crucial for social media engagement, website performance, and professional presentations. <strong>Image Resizer Pro</strong> offers a comprehensive solution for <strong>online image resizing</strong>, <strong>precision cropping</strong>, and <strong>aspect ratio adjustments</strong> across all major formats including JPG, PNG, BMP, and JPEG.
+        </p>
+
+        <h3 class="compressor-h3">Why Use Our Advanced Image Resizer?</h3>
+        <p>
+          Our professional-grade tool helps you resize images for Instagram, create Facebook cover photos, optimize LinkedIn headers, and prepare website visuals with pixel-perfect accuracy. Key features include:
+        </p>
+
+        <h3 class="compressor-h3">Key Features:</h3>
+        <ul class="compressor-list">
+          <li><strong>Smart Aspect Ratio Controls:</strong> 1:1 (Square), 16:9 (Widescreen), 9:16 (Story), and Freeform</li>
+          <li><strong>Circular Cropping:</strong> Perfect for profile pictures and creative compositions</li>
+          <li><strong>Real-Time Preview:</strong> See changes instantly with dimension overlays</li>
+          <li><strong>Format Conversion:</strong> Save as JPG, PNG, BMP, or JPEG</li>
+          <li><strong>Precision Controls:</strong> Pixel-perfect dimension inputs</li>
+          <li><strong>Mobile-Optimized:</strong> Works seamlessly on all devices</li>
+        </ul>
+
+        <h3 class="compressor-h3">How Does It Work?</h3>
+        <ol class="compressor-ordered-list">
+          <li><strong>Upload Image:</strong> Drag &amp; drop your JPG, PNG, or BMP file</li>
+          <li><strong>Choose Mode:</strong> Select Resize, Crop, or Aspect Ratio preset</li>
+          <li><strong>Adjust Visually:</strong> Use interactive controls or enter exact dimensions</li>
+          <li><strong>Download:</strong> Get your optimized image in preferred format</li>
+        </ol>
+
+        <h3 class="compressor-h3">Professional Use Cases</h3>
+        <ul class="compressor-list">
+          <li><strong>Social Media Managers:</strong> Create platform-specific sizes for Instagram posts, Facebook covers, and Twitter headers</li>
+          <li><strong>E-Commerce Sites:</strong> Standardize product image dimensions across your catalog</li>
+          <li><strong>Bloggers:</strong> Optimize featured images for WordPress and other CMS platforms</li>
+          <li><strong>Photographers:</strong> Prepare client deliverables in multiple aspect ratios</li>
+          <li><strong>HR Professionals:</strong> Resize employee headshots for company directories</li>
+        </ul>
+
+        <h3 class="compressor-h3">Technical Advantages</h3>
+        <ul class="compressor-list">
+          <li><strong>Resolution Preservation:</strong> Maintain best image clarity</li>
+          <li><strong>Cross-Platform Consistency:</strong> Ensure uniform visuals across all devices</li>
+          <li><strong>Transparency Support:</strong> Maintain PNG transparency during resizing</li>
+        </ul>
+
+        <h3 class="compressor-h3">SEO Benefits of Proper Image Resizing</h3>
+        <p>
+          Optimized images contribute significantly to website performance and search rankings:
+        </p>
+        <ul class="compressor-list">
+          <li>Improves Page Load Speed (Critical for Google Rankings)</li>
+          <li>Enhances Core Web Vitals scores</li>
+          <li>Reduces bounce rates through better user experience</li>
+          <li>Optimizes bandwidth usage for mobile visitors</li>
+        </ul>
+
+        <h3 class="compressor-h3">Why Choose Image Resizer Pro?</h3>
+        <ul class="compressor-list mb-0">
+          <li><strong>Zero Quality Loss:</strong> Advanced interpolation methods</li>
+          <li><strong>No Registration Required:</strong> Completely free with unlimited use</li>
+          <li><strong>Military-Grade Security:</strong> All processing done client-side</li>
+          <li><strong>Multi-Format Support:</strong> JPG, PNG, BMP, JPEG input/output</li>
+        </ul>
+      </article>
+      
+
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/include-partials.js"></script>
+  <script>
+    (function () {
+      const dropZone = document.getElementById("resizerDropZone");
+      const fileInput = document.getElementById("resizerFileInput");
+      const chooseBtn = document.getElementById("resizerChooseBtn");
+      const fileNameEl = document.getElementById("resizerFileName");
+      const controlsEl = document.getElementById("resizerControls");
+      const widthInput = document.getElementById("resizerWidth");
+      const heightInput = document.getElementById("resizerHeight");
+      const ratioSelect = document.getElementById("resizerRatio");
+      const formatSelect = document.getElementById("resizerFormat");
+      const resizeBtn = document.getElementById("resizeImageBtn");
+      const hintEl = document.getElementById("resizerHint");
+      const outputBox = document.getElementById("resizerOutputBox");
+      const previewImg = document.getElementById("resizerPreviewImg");
+      const metaText = document.getElementById("resizerMetaText");
+      const downloadLink = document.getElementById("resizerDownloadLink");
+
+      let loadedImage = null;
+      let originalFileName = "image";
+
+      function applyRatioToHeight() {
+        const w = parseInt(widthInput.value, 10);
+        if (!w || w <= 0) return;
+        const ratioVal = ratioSelect.value;
+        if (ratioVal === "1:1") {
+          heightInput.value = w;
+        } else if (ratioVal === "16:9") {
+          heightInput.value = Math.max(1, Math.round((w * 9) / 16));
+        } else if (ratioVal === "9:16") {
+          heightInput.value = Math.max(1, Math.round((w * 16) / 9));
+        }
+      }
+
+      function applyRatioToWidth() {
+        const h = parseInt(heightInput.value, 10);
+        if (!h || h <= 0) return;
+        const ratioVal = ratioSelect.value;
+        if (ratioVal === "1:1") {
+          widthInput.value = h;
+        } else if (ratioVal === "16:9") {
+          widthInput.value = Math.max(1, Math.round((h * 16) / 9));
+        } else if (ratioVal === "9:16") {
+          widthInput.value = Math.max(1, Math.round((h * 9) / 16));
+        }
+      }
+
+      function loadImageFile(file) {
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => {
+            loadedImage = img;
+            originalFileName = file.name.replace(/\.[^/.]+$/, "");
+            fileNameEl.textContent = file.name;
+            widthInput.value = img.width;
+            heightInput.value = img.height;
+            controlsEl.classList.remove("d-none");
+            hintEl.textContent = `Original dimensions: ${img.width} x ${img.height} px`;
+          };
+          img.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+
+      chooseBtn.addEventListener("click", () => fileInput.click());
+      fileInput.addEventListener("change", (e) => {
+        if (e.target.files && e.target.files[0]) {
+          loadImageFile(e.target.files[0]);
+        }
+      });
+
+      ["dragenter", "dragover"].forEach((evt) => {
+        dropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          dropZone.classList.add("is-dragover");
+        });
+      });
+
+      ["dragleave", "drop"].forEach((evt) => {
+        dropZone.addEventListener(evt, (e) => {
+          e.preventDefault();
+          dropZone.classList.remove("is-dragover");
+        });
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0]) {
+          loadImageFile(e.dataTransfer.files[0]);
+        }
+      });
+
+      widthInput.addEventListener("input", applyRatioToHeight);
+      heightInput.addEventListener("input", applyRatioToWidth);
+      ratioSelect.addEventListener("change", applyRatioToHeight);
+
+      function encodeBmpFromImageData(imageData) {
+        const w = imageData.width;
+        const h = imageData.height;
+        const src = imageData.data;
+        const rowSize = Math.floor((24 * w + 31) / 32) * 4;
+        const pixelArraySize = rowSize * h;
+        const headerSize = 54;
+        const fileSize = headerSize + pixelArraySize;
+        const buffer = new ArrayBuffer(fileSize);
+        const view = new DataView(buffer);
+        const bytes = new Uint8Array(buffer);
+
+        view.setUint8(0, 0x42);
+        view.setUint8(1, 0x4d);
+        view.setUint32(2, fileSize, true);
+        view.setUint32(10, headerSize, true);
+        view.setUint32(14, 40, true);
+        view.setInt32(18, w, true);
+        view.setInt32(22, h, true);
+        view.setUint16(26, 1, true);
+        view.setUint16(28, 24, true);
+        view.setUint32(34, pixelArraySize, true);
+
+        let offset = headerSize;
+        for (let y = h - 1; y >= 0; y--) {
+          let rowPos = 0;
+          for (let x = 0; x < w; x++) {
+            const idx = (y * w + x) * 4;
+            bytes[offset + rowPos++] = src[idx + 2];
+            bytes[offset + rowPos++] = src[idx + 1];
+            bytes[offset + rowPos++] = src[idx];
+          }
+          offset += rowSize;
+        }
+
+        return new Blob([buffer], { type: "image/bmp" });
+      }
+
+      resizeBtn.addEventListener("click", () => {
+        if (!loadedImage) {
+          hintEl.textContent = "Please choose an image file first.";
+          return;
+        }
+
+        const targetW = Math.max(1, parseInt(widthInput.value, 10) || loadedImage.width);
+        const targetH = Math.max(1, parseInt(heightInput.value, 10) || loadedImage.height);
+        const opt = formatSelect.options[formatSelect.selectedIndex];
+        const mimeType = opt.value;
+        const ext = opt.getAttribute("data-ext");
+        const outName = `${originalFileName}-${targetW}x${targetH}.${ext}`;
+
+        const canvas = document.createElement("canvas");
+        canvas.width = targetW;
+        canvas.height = targetH;
+        const ctx = canvas.getContext("2d");
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = "high";
+
+        if (mimeType === "image/jpeg" || mimeType === "image/bmp") {
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(0, 0, targetW, targetH);
+        }
+        ctx.drawImage(loadedImage, 0, 0, targetW, targetH);
+
+        const finishWithBlob = (blob) => {
+          const url = URL.createObjectURL(blob);
+          previewImg.src = url;
+          metaText.textContent = `New Size: ${targetW} x ${targetH} px | Format: ${ext.toUpperCase()} | File Size: ${(blob.size / 1024).toFixed(1)} KB`;
+          downloadLink.href = url;
+          downloadLink.download = outName;
+          outputBox.classList.remove("d-none");
+          outputBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        };
+
+        if (mimeType === "image/bmp") {
+          finishWithBlob(encodeBmpFromImageData(ctx.getImageData(0, 0, targetW, targetH)));
+        } else {
+          canvas.toBlob((blob) => {
+            if (blob) finishWithBlob(blob);
+          }, mimeType, 0.92);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

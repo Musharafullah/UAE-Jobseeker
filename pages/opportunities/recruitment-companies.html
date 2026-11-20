@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recruitment Companies - UAE Job Seekers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="../../assets/css/variables.css" rel="stylesheet">
+  <link href="../../assets/css/main.css" rel="stylesheet">
+  <link href="../../assets/css/components.css" rel="stylesheet">
+</head>
+<body data-base="../../" data-share>
+
+  <div id="navbar"></div>
+
+  <main>
+
+    <!-- START: Page Header -->
+    <section class="page-header">
+      <div class="container text-center">
+        <h1>Recruitment Companies in All Countries</h1>
+        <p>Select a country to filter the companies</p>
+      </div>
+    </section>
+    <!-- END: Page Header -->
+
+    <section class="section-padding" id="directory" data-source="data/recruiters.json" data-noun="company"
+             data-countries="UAE,Bahrain,KSA,Qatar,Canada">
+      <div class="container">
+
+        <!-- START: Filters -->
+        <div class="dir-filter">
+          <label for="dirCountry" class="visually-hidden">Select a country</label>
+          <select id="dirCountry" class="form-select form-select-lg"></select>
+        </div>
+        <hr class="my-4">
+        <!-- END: Filters -->
+
+        <p class="visually-hidden" id="dirCount" aria-live="polite"></p>
+
+        <!-- START: Cards -->
+        <div class="row g-4" id="dirGrid"></div>
+        <!-- END: Cards -->
+
+        <!-- START: Unlock full list -->
+        <div class="lock-box mt-5">
+          <i class="bi bi-lock-fill lock"></i>
+          <div>
+            <h2>Unlock the Full List of Recruitment Companies!</h2>
+            <p>You are only seeing a limited selection of the recruitment companies. Many more are waiting for you to explore! Do not miss out on hidden opportunities that could change your career.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="../auth/candidate-login.html" class="btn btn-olive">Login</a>
+              <a href="../auth/register.html" class="btn btn-olive-outline">Create an Account</a>
+            </div>
+          </div>
+        </div>
+        <!-- END: Unlock full list -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/include-partials.js"></script>
+  <script src="../../assets/js/directory.js"></script>
+</body>
+</html>

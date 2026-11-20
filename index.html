@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - UAE Job Seekers</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <link href="assets/css/variables.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+  <link href="assets/css/pages/home.css" rel="stylesheet">
+</head>
+<body data-base="./">
+
+  <div id="navbar"></div>
+
+  <main>
+
+    
+    <section class="hero-section text-center">
+      <div class="container">
+        <h1 class="hero-title"><i class="bi bi-search"></i> Find Your <span class="hero-accent">Next Job</span></h1>
+        <p class="hero-subtitle">Job Seekers #1 Job Site – Explore the Opportunities</p>
+
+        <form class="hero-search" action="pages/opportunities/gulf-jobs.html" method="get" role="search">
+          <input type="search" name="q" class="hero-input"
+                 placeholder="Enter a title or keyword" aria-label="Enter a title or keyword">
+          <button type="submit" class="btn btn-cta hero-btn">Search</button>
+        </form>
+
+        
+        <div class="popular-searches">
+          <p class="popular-label">Popular Searches:</p>
+          <div class="popular-chips">
+            <a href="pages/opportunities/gulf-jobs.html?q=Sales" class="pop-chip">Sales</a>
+            <a href="pages/opportunities/gulf-jobs.html?q=Project" class="pop-chip">Project</a>
+            <a href="pages/opportunities/gulf-jobs.html?q=Engineer" class="pop-chip">Engineer</a>
+            <a href="pages/opportunities/gulf-jobs.html?q=Marketing" class="pop-chip">Marketing</a>
+            <a href="pages/opportunities/gulf-jobs.html?q=IT" class="pop-chip">IT</a>
+            <a href="pages/opportunities/gulf-jobs.html?q=Finance" class="pop-chip">Finance</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+
+    
+    <section class="wa-section">
+      <div class="container">
+
+        <div class="wa-icon-box"><i class="bi bi-whatsapp"></i></div>
+        <h2 class="wa-title">Join 30,000+ Members Community</h2>
+
+        <div class="row g-4 align-items-center">
+
+          <div class="col-lg-4">
+            <div class="wa-block">
+              <h3>Get Instant Updates</h3>
+              <p>Join our WhatsApp channel to receive real-time notifications about the latest job postings.</p>
+            </div>
+            <div class="wa-block">
+              <h3>Never Miss an Opportunity</h3>
+              <p>Stay ahead of the competition by being the first to know about new job openings in the UAE.</p>
+            </div>
+            <div class="wa-block">
+              <h3>Stay Informed</h3>
+              <p>Get insights, tips, and industry news delivered straight to your phone, keeping you informed and empowered in your job search journey.</p>
+            </div>
+            <a href="https://whatsapp.com/channel/0029VaAd1HWEAKW8Al8BgS2P" target="_blank" rel="noopener"
+               class="btn btn-cta btn-lg w-100">Join Now</a>
+          </div>
+
+          <div class="col-lg-4 text-center">
+            <img src="assets/images/hero/whatsapp-channel.png" class="wa-phone"
+                 alt="UAE Job Seekers WhatsApp channel preview" loading="lazy">
+          </div>
+
+          <div class="col-lg-4">
+            <div class="wa-block">
+              <h3>Free and Convenient</h3>
+              <p>Our WhatsApp channel is free to join and provides a convenient way to stay updated on job opportunities, anytime, anywhere.</p>
+            </div>
+            <div class="wa-block">
+              <h3>Share Opportunities with Others</h3>
+              <p>Simply share job opportunities with your friends, groups, and contacts on WhatsApp who are searching for work.</p>
+            </div>
+            <div class="wa-qr-card"><div id="waQr" aria-label="QR code to join the WhatsApp channel"></div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <section class="section-padding pb-0">
+      <div class="container">
+        <div class="discover-card">
+          <div class="discover-head">Discover more</div>
+          <a href="pages/opportunities/gulf-jobs.html" class="discover-row"><span>Jobs</span><i class="bi bi-chevron-right"></i></a>
+          <a href="pages/opportunities/gulf-jobs.html" class="discover-row"><span>Job</span><i class="bi bi-chevron-right"></i></a>
+          <a href="pages/opportunities/gulf-jobs.html" class="discover-row"><span>Browse Careers</span><i class="bi bi-chevron-right"></i></a>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <section class="section-padding">
+      <div class="container" style="max-width: 900px;">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion uaejs-accordion" id="faqAccordion"></div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <div id="newsletter"></div>
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/include-partials.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
