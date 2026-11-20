@@ -19,7 +19,7 @@
 
   let jobs = [];
   let page = 1;
-  let applied = { kw: "", countries: [] }; // filters Search dabane par lagte hain
+  let applied = { kw: "", countries: [] }; 
 
   const esc = (s) =>
     String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -161,7 +161,7 @@
 
     buildCountries();
 
-    // Home page ke search se aane wali value (?q=...)
+    
     fKeyword.value = new URLSearchParams(location.search).get("q") || "";
 
     form.addEventListener("submit", (e) => {
