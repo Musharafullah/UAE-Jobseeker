@@ -1,7 +1,7 @@
 (function () {
   const base = document.body.dataset.base || "./";
   const PAGE_SIZE = 10;
-  // Original ke location filter mein ye 4 mulk hamesha nazar aate hain
+  
   const COUNTRIES = ["United Arab Emirates", "Qatar", "Saudi Arabia", "Pakistan"];
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
